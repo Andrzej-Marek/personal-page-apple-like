@@ -30,7 +30,11 @@ const NavBar = component$(() => {
     <nav class="hidden md:flex mt-8 justify-end container text-gray text-sm">
       <ul class="flex gap-8">
         {menuNavLinks.map((el) => (
-          <NavElement isCurrent={pathname === el.path} label={el.label} />
+          <NavElement
+            key={el.path}
+            isCurrent={pathname === el.path}
+            label={el.label}
+          />
         ))}
       </ul>
     </nav>

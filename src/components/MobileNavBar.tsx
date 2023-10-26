@@ -41,7 +41,11 @@ const MobileNavBar = component$(() => {
             </div>
             <ul class="flex flex-col gap-8">
               {menuNavLinks.map((el) => (
-                <NavElement isCurrent={pathname === el.path} label={el.label} />
+                <NavElement
+                  key={el.path}
+                  isCurrent={pathname === el.path}
+                  label={el.label}
+                />
               ))}
             </ul>
           </div>

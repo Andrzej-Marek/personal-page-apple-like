@@ -33,6 +33,10 @@ module.exports = {
         "3/3/1fr": "2fr 2fr 1fr",
       },
 
+      backgroundImage: {
+        "lets-work-together": "url('/lets-work-together.webp')",
+      },
+
       // default breakpoints but with 40px removed
       screens: {
         sm: "600px",
