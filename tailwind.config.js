@@ -31,6 +31,7 @@ module.exports = {
         "3/1fr": "3fr 1fr",
         "main-layout": "275px 1fr",
         "contact-layout": "370px 1fr",
+        "cv-layout": "275px 1fr 275px",
         "1/1/1fr": "1fr 1fr 1fr",
         "2/1/1fr": "2fr 1fr 1fr",
         "2/2/1fr": "2fr 2fr 1fr",

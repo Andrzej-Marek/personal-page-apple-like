@@ -7,12 +7,8 @@ import Button from "~/components/Button";
 import Card from "~/components/Card";
 import Input from "~/components/Input";
 import TextArea from "~/components/TextArea";
-import GithubIcon from "~/components/icons/GithubIcon ";
-import LinkedinIcon from "~/components/icons/LinkedinIcon";
-import LocalizationIcon from "~/components/icons/LocalizationIcon";
-import MailIcon from "~/components/icons/MailIcon";
-import PhoneIcon from "~/components/icons/PhoneIcon";
-import TwitterIcon from "~/components/icons/TwitterIcon ";
+import ContactCard from "~/containers/ContactCard";
+import SocialMediaCard from "~/containers/SocialMediaCard";
 
 const ContactSchema = z.object({
   name: z.string().nullish(),
@@ -30,32 +26,8 @@ export default component$(() => {
     <section class="container space-y-6 mt-4 md:mt-20">
       <div class="grid lg:grid-cols-contact-layout gap-6">
         <div class="grid md:grid-cols-2  gap-6 lg:block lg:space-y-6">
-          <Card headingSize="sm" heading="Contacts">
-            <div class="space-y-6">
-              <ContactElement
-                section="LOCALIZATION"
-                text={["Pszczyńska 116", "43-254 Warszowice", "Poland"]}
-              >
-                <LocalizationIcon />
-              </ContactElement>
-              <ContactElement
-                section="MAIL"
-                text={["andrzejmarek116@gmail.com"]}
-              >
-                <MailIcon />
-              </ContactElement>
-              <ContactElement section="PHONE" text={["(+48) 794 965 465"]}>
-                <PhoneIcon />
-              </ContactElement>
-            </div>
-          </Card>
-          <Card headingSize="sm" heading="Social Media" class="h-fit">
-            <div class="flex justify-center md:justify-between gap-12 px-6">
-              <LinkedinIcon />
-              <GithubIcon />
-              <TwitterIcon />
-            </div>
-          </Card>
+          <ContactCard />
+          <SocialMediaCard />
         </div>
         <Card headingSize="xl" heading="Let’s Work Together.">
           <ContactForm />
@@ -64,32 +36,6 @@ export default component$(() => {
     </section>
   );
 });
-
-const ContactElement = ({
-  children,
-  section,
-  text,
-}: {
-  children: any;
-  section: string;
-  text: string[];
-}) => {
-  return (
-    <div class="flex gap-6 items-center">
-      <div class="p-3 lg:p-6">{children}</div>
-      <div class="font-semibold space-y-1">
-        <span class="uppercase text-xs text-gray ">{section}</span>
-        <div class="text-sm ">
-          {text.map((t) => (
-            <div key={t} class="break-words w-[150px] sm:w-full">
-              {t}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const useFormLoader = routeLoader$<InitialValues<ContactSchema>>(() => ({
   message: "",

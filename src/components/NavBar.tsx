@@ -12,8 +12,8 @@ export const menuNavLinks = [
     path: "/portfolio/",
   },
   {
-    label: "About",
-    path: "/about/",
+    label: "CV",
+    path: "/cv/",
   },
   {
     label: "Contact",
