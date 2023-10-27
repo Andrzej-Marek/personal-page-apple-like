@@ -138,7 +138,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
     links: [
       {
         rel: "canonical",
-        href: `https://amarek.dev/portfolio/${project.name}`,
+        href: `https://andrzejmarek.com/portfolio/${project.name}`,
       },
     ],
     meta: [
@@ -209,7 +209,7 @@ export const head: DocumentHead = ({ resolveValue }) => {
       },
       {
         name: "canonical",
-        content: `https://amarek.dev/portfolio/${project.name}`,
+        content: `https://andrzejmarek.com/portfolio/${project.name}`,
       },
     ],
   };

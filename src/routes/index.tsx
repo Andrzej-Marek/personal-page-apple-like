@@ -45,7 +45,7 @@ export const head: DocumentHead = {
   links: [
     {
       rel: "canonical",
-      href: "https://amarek.dev/about",
+      href: "https://andrzejmarek.com/about",
     },
   ],
   meta: [
@@ -93,11 +93,11 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://amarek.dev/images/profile.webp",
+      content: "https://andrzejmarek.com/images/profile.webp",
     },
     {
       name: "og:url",
-      content: "https://amarek.dev",
+      content: "https://andrzejmarek.com",
     },
     {
       name: "og:type",
@@ -122,7 +122,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://amarek.dev/images/profile.webp",
+      content: "https://andrzejmarek.com/images/profile.webp",
     },
     {
       name: "twitter:site",

@@ -108,7 +108,7 @@ export const head: DocumentHead = {
   links: [
     {
       rel: "canonical",
-      href: "https://amarek.dev/portfolio",
+      href: "https://andrzejmarek.com/portfolio",
     },
   ],
   meta: [
@@ -141,11 +141,11 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://amarek.dev/portfolio-image.jpg", // Replace with an image related to your portfolio
+      content: "https://andrzejmarek.com/portfolio-image.jpg", // Replace with an image related to your portfolio
     },
     {
       name: "og:url",
-      content: "https://amarek.dev/portfolio", // Replace with the actual URL of your portfolio page
+      content: "https://andrzejmarek.com/portfolio", // Replace with the actual URL of your portfolio page
     },
     {
       name: "og:type",
@@ -170,7 +170,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://amarek.dev/portfolio-image.jpg", // Replace with an image related to your portfolio
+      content: "https://andrzejmarek.com/portfolio-image.jpg", // Replace with an image related to your portfolio
     },
     {
       name: "twitter:site",
@@ -182,7 +182,7 @@ export const head: DocumentHead = {
     },
     {
       name: "canonical",
-      content: "https://amarek.dev/portfolio", // Replace with the actual URL of your portfolio page
+      content: "https://andrzejmarek.com/portfolio", // Replace with the actual URL of your portfolio page
     },
   ],
 };

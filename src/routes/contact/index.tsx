@@ -168,7 +168,7 @@ export const head: DocumentHead = {
   links: [
     {
       rel: "canonical",
-      href: "https://amarek.dev/contact",
+      href: "https://andrzejmarek.com/contact",
     },
   ],
   meta: [
@@ -201,11 +201,11 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://amarek.dev/contact-image.jpg", // Replace with an image related to your contact page or your profile image
+      content: "https://andrzejmarek.com/contact-image.jpg", // Replace with an image related to your contact page or your profile image
     },
     {
       name: "og:url",
-      content: "https://amarek.dev/contact", // Replace with the actual URL of your contact page
+      content: "https://andrzejmarek.com/contact", // Replace with the actual URL of your contact page
     },
     {
       name: "og:type",
@@ -230,7 +230,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://amarek.dev/contact-image.jpg", // Replace with an image related to your contact page or your profile image
+      content: "https://andrzejmarek.com/contact-image.jpg", // Replace with an image related to your contact page or your profile image
     },
     {
       name: "twitter:site",
@@ -242,7 +242,7 @@ export const head: DocumentHead = {
     },
     {
       name: "canonical",
-      content: "https://amarek.dev/contact", // Replace with the actual URL of your contact page
+      content: "https://andrzejmarek.com/contact", // Replace with the actual URL of your contact page
     },
   ],
 };
