@@ -6,9 +6,9 @@ const LetsWorkTogethersCard = component$(() => {
     <Card class="min-h-[180px] bg-lets-work-together bg-no-repeat bg-center bg-cover">
       <div class="absolute z-20 top-0 left-0 bottom-0 right-0 w-full h-full">
         <div class="w-full h-full flex flex-col items-center justify-center text-white">
-          <h5 class="text-xl lg:text-2xl xl:text-4xl font-bold">
+          <span class="text-xl lg:text-2xl xl:text-4xl font-bold">
             Let's work together
-          </h5>
+          </span>
         </div>
       </div>
     </Card>

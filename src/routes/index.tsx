@@ -9,7 +9,7 @@ import ProjectsCard from "~/containers/Projects";
 import ServicesCard from "~/containers/ServicesCard";
 import WorkHistoryCard from "~/containers/WorkHistory";
 
-export const apiKey = process.env.PUBLIC_BUILDER_API_KEY as string;
+// export const apiKey = process.env.PUBLIC_BUILDER_API_KEY as string;
 
 export default component$(() => {
   return (
@@ -42,7 +42,12 @@ export default component$(() => {
 
 export const head: DocumentHead = {
   title: "Andrej Marek - React & Node.js Developer",
-
+  links: [
+    {
+      rel: "canonical",
+      href: "https://amarek.dev/about",
+    },
+  ],
   meta: [
     {
       name: "description",
@@ -88,11 +93,11 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://example.com/your-profile-image.jpg",
+      content: "https://amarek.dev/images/profile.webp",
     },
     {
       name: "og:url",
-      content: "https://example.com/your-website-url",
+      content: "https://amarek.dev",
     },
     {
       name: "og:type",
@@ -117,7 +122,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://example.com/your-profile-image.jpg",
+      content: "https://amarek.dev/images/profile.webp",
     },
     {
       name: "twitter:site",

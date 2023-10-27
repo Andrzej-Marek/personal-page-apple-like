@@ -28,6 +28,7 @@
   "devDependencies": {
     "@builder.io/qwik": "^1.2.14",
     "@builder.io/qwik-city": "^1.2.14",
+    "@tailwindcss/forms": "0.5.6",
     "@types/eslint": "^8.44.4",
     "@types/node": "^20.8.4",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
@@ -47,6 +48,8 @@
   "dependencies": {
     "@builder.io/dev-tools": "0.1.24",
     "@builder.io/sdk-qwik": "0.6.3",
-    "classnames": "2.3.2"
+    "@modular-forms/qwik": "0.21.0",
+    "classnames": "2.3.2",
+    "zod": "3.22.4"
   }
 }

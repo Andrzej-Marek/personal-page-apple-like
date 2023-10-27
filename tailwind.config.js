@@ -11,6 +11,9 @@ module.exports = {
       },
       colors: {
         black: "#232323",
+        input: {
+          background: "#F9F9F8",
+        },
         primary: {
           DEFAULT: "#0A66C2",
         },
@@ -27,6 +30,7 @@ module.exports = {
         "1/3fr": "1fr 3fr",
         "3/1fr": "3fr 1fr",
         "main-layout": "275px 1fr",
+        "contact-layout": "370px 1fr",
         "1/1/1fr": "1fr 1fr 1fr",
         "2/1/1fr": "2fr 1fr 1fr",
         "2/2/1fr": "2fr 2fr 1fr",
@@ -34,7 +38,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        "lets-work-together": "url('/lets-work-together.webp')",
+        "lets-work-together": "url('/images/lets-work-together.webp')",
       },
 
       // default breakpoints but with 40px removed
@@ -51,5 +55,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

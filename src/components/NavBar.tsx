@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { useLocation } from "@builder.io/qwik-city";
+import { Link, useLocation } from "@builder.io/qwik-city";
 import classNames from "classnames";
 
 export const menuNavLinks = [
@@ -8,16 +8,16 @@ export const menuNavLinks = [
     path: "/",
   },
   {
-    label: "Works",
-    path: "/works",
+    label: "Portfolio",
+    path: "/portfolio/",
   },
   {
     label: "About",
-    path: "/about",
+    path: "/about/",
   },
   {
     label: "Contact",
-    path: "/contact",
+    path: "/contact/",
   },
 ];
 
@@ -34,6 +34,7 @@ const NavBar = component$(() => {
             key={el.path}
             isCurrent={pathname === el.path}
             label={el.label}
+            path={el.path}
           />
         ))}
       </ul>
@@ -44,12 +45,14 @@ const NavBar = component$(() => {
 const NavElement = ({
   isCurrent,
   label,
+  path,
 }: {
   isCurrent: boolean;
   label: string;
+  path: string;
 }) => (
   <li class={classNames(isCurrent ? "text-primary font-semibold" : "")}>
-    {label}
+    <Link href={path}>{label}</Link>
   </li>
 );
 
