@@ -1,19 +1,22 @@
 import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 import CallToAction from "~/components/CallToAction";
 import Card from "~/components/Card";
 
 const ExperienceCard = component$(() => {
   return (
     <Card>
-      <div class="flex flex-col h-full justify-center items-center gap-4">
-        {/* <div class="grid sm:grid-cols-3 md:grid-cols-2  lg:grid-cols-3 gap-6"> */}
-        <div class="flex flex-wrap justify-center gap-6">
-          <Tile lineOne="years" lineTwo="experience" value="08" />
-          <Tile lineOne="Clients" lineTwo="worldwide" value="+30" />
-          <Tile lineOne="total" lineTwo="Projects" value="+50" />
+      <Link href="/portfolio" class="h-full">
+        <div class="flex flex-col h-full justify-center items-center gap-4">
+          {/* <div class="grid sm:grid-cols-3 md:grid-cols-2  lg:grid-cols-3 gap-6"> */}
+          <div class="flex flex-wrap justify-center gap-6">
+            <Tile lineOne="years" lineTwo="experience" value="08" />
+            <Tile lineOne="Clients" lineTwo="worldwide" value="+30" />
+            <Tile lineOne="total" lineTwo="Projects" value="+50" />
+          </div>
+          <CallToAction subTitle="Specialization" title="Experience" />
         </div>
-        <CallToAction subTitle="Specialization" title="Experience" />
-      </div>
+      </Link>
     </Card>
   );
 });

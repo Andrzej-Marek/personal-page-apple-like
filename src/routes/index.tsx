@@ -45,7 +45,7 @@ export const head: DocumentHead = {
   links: [
     {
       rel: "canonical",
-      href: "https://andrzejmarek.com/about",
+      href: "https://andrzejmarek.com",
     },
   ],
   meta: [
