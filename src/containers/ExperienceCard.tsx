@@ -6,7 +6,7 @@ import Card from "~/components/Card";
 const ExperienceCard = component$(() => {
   return (
     <Card>
-      <Link href="/portfolio" class="h-full">
+      <Link href="/cv" class="h-full">
         <div class="flex flex-col h-full justify-center items-center gap-4">
           {/* <div class="grid sm:grid-cols-3 md:grid-cols-2  lg:grid-cols-3 gap-6"> */}
           <div class="flex flex-wrap justify-center gap-6">

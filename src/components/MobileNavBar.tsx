@@ -1,11 +1,13 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import { useLocation } from "@builder.io/qwik-city";
+import { useLocation, useNavigate } from "@builder.io/qwik-city";
 import classNames from "classnames";
 import { menuNavLinks } from "./NavBar";
 import CloseIcon from "./icons/CloseIcon";
 import HamburgerIcon from "./icons/HamburgerIcon";
 
 const MobileNavBar = component$(() => {
+  const nav = useNavigate();
+
   const isOpen = useSignal(false);
 
   const loc = useLocation();
@@ -16,6 +18,7 @@ const MobileNavBar = component$(() => {
     <nav class="md:hidden flex mt-4 justify-end container text-gray text-sm">
       <button
         class="z-40 border border-black p-1.5 rounded"
+        aria-label="open menu"
         onClick$={() => {
           isOpen.value = !isOpen.value;
         }}
@@ -39,13 +42,21 @@ const MobileNavBar = component$(() => {
             >
               <CloseIcon />
             </div>
-            <ul class="flex flex-col gap-8">
+            <ul class="flex flex-col gap-4">
               {menuNavLinks.map((el) => (
-                <NavElement
-                  key={el.path}
-                  isCurrent={pathname === el.path}
-                  label={el.label}
-                />
+                <a
+                  preventdefault:click
+                  onClick$={() => {
+                    isOpen.value = false;
+                    nav(el.path);
+                  }}
+                >
+                  <NavElement
+                    key={el.path}
+                    isCurrent={pathname === el.path}
+                    label={el.label}
+                  />
+                </a>
               ))}
             </ul>
           </div>
@@ -62,7 +73,12 @@ const NavElement = ({
   isCurrent: boolean;
   label: string;
 }) => (
-  <li class={classNames(isCurrent ? "text-primary font-semibold" : "")}>
+  <li
+    class={classNames(
+      "py-4 cursor-pointer",
+      isCurrent ? "text-primary font-semibold " : ""
+    )}
+  >
     {label}
   </li>
 );

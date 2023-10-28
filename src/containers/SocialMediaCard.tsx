@@ -10,6 +10,7 @@ const SocialMediaCard = component$(() => {
       <div class="flex justify-center md:justify-between gap-12 px-6">
         <a
           href="https://www.linkedin.com/in/andrzej-marek/"
+          aria-label="Linkedin"
           target="_blank"
           rel="nofollow"
         >
@@ -18,6 +19,7 @@ const SocialMediaCard = component$(() => {
         <a
           href="https://github.com/Andrzej-Marek"
           target="_blank"
+          aria-label="Github"
           rel="nofollow"
         >
           <GithubIcon />
@@ -25,6 +27,7 @@ const SocialMediaCard = component$(() => {
         <a
           href="https://twitter.com/EkstraPower"
           target="_blank"
+          aria-label="Twitter"
           rel="nofollow"
         >
           <TwitterIcon />
