@@ -109,7 +109,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:card",
-      content: "summary_large_image",
+      content: "https://andrzejmarek.com/images/profile.webp",
     },
     {
       name: "twitter:title",

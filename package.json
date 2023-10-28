@@ -26,6 +26,7 @@
     "qwik": "qwik"
   },
   "devDependencies": {
+    "@builder.io/partytown": "^0.8.1",
     "@builder.io/qwik": "^1.2.14",
     "@builder.io/qwik-city": "^1.2.14",
     "@tailwindcss/forms": "0.5.6",
