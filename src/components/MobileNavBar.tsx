@@ -45,7 +45,9 @@ const MobileNavBar = component$(() => {
             <ul class="flex flex-col gap-4">
               {menuNavLinks.map((el) => (
                 <a
+                  key={el.path}
                   preventdefault:click
+                  href={el.path}
                   onClick$={() => {
                     isOpen.value = false;
                     nav(el.path);

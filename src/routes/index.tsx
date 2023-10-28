@@ -9,8 +9,6 @@ import ProjectsCard from "~/containers/Projects";
 import ServicesCard from "~/containers/ServicesCard";
 import WorkHistoryCard from "~/containers/WorkHistory";
 
-// export const apiKey = process.env.PUBLIC_BUILDER_API_KEY as string;
-
 export default component$(() => {
   return (
     <div>
@@ -41,7 +39,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Andrej Marek - React & Node.js Developer",
+  title: "Andrzej Marek - React & Node.js Developer",
   links: [
     {
       rel: "canonical",
