@@ -50,9 +50,8 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        "React & Node.js Maestro 🔥 Crafting Digital Marvels 💻 Turning Code into Creative Magic 💪",
+        "I'm a passionate React and Node.js developer, creating web apps to bring your ideas to life. Learn more about me and my work on this website.",
     },
-
     {
       name: "charset",
       content: "UTF-8",
@@ -78,10 +77,11 @@ export const head: DocumentHead = {
       name: "og:title",
       content: "Andrzej Marek - Software Developer",
     },
+
     {
       name: "og:description",
       content:
-        "I'm a passionate React and Node.js developer, creating web apps to bring your ideas to life. Learn more about me and my work on this website.",
+        "React & Node.js Maestro 🔥 Crafting Digital Marvels 💻 Turning Code into Creative Magic 💪",
     },
     {
       name: "og:image",
