@@ -234,7 +234,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://andrzejmarek.com/contact-image.jpg", // Replace with an image related to your contact page or your profile image
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "twitter:site",

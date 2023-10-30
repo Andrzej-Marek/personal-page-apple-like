@@ -170,7 +170,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://andrzejmarek.com/portfolio-image.jpg", // Replace with an image related to your portfolio
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "twitter:site",

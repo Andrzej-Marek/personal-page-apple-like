@@ -67,7 +67,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://andrzejmarek.com/cv-image.jpg", // Replace with an image related to your CV or your profile image
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "twitter:site",

@@ -61,12 +61,6 @@ export const head: DocumentHead = {
       name: "viewport",
       content: "width=device-width, initial-scale=1.0",
     },
-
-    {
-      name: "description",
-      content:
-        "I'm a passionate React and Node.js developer, creating web apps to bring your ideas to life. Learn more about me and my work on this website.",
-    },
     {
       name: "keywords",
       content:
@@ -107,7 +101,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:card",
-      content: "https://andrzejmarek.com/images/profile.webp",
+      content: "summary_large_image",
     },
     {
       name: "twitter:title",
@@ -120,7 +114,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://andrzejmarek.com/images/profile.webp",
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "twitter:site",
