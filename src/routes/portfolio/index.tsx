@@ -4,6 +4,7 @@ import { fetchEntries } from "@builder.io/sdk-qwik";
 import { PortfolioData } from "~/api/porfolio.api";
 import CallToAction from "~/components/CallToAction";
 import Card from "~/components/Card";
+import Spinner from "~/components/Spinner";
 import TruncatedHtml from "~/components/TruncatedHtml";
 import ContactMeCard from "~/containers/ContactMeCard";
 import ExperienceCard from "~/containers/ExperienceCard";
@@ -24,7 +25,7 @@ export default component$(() => {
   return (
     <Resource
       value={linksResource}
-      onPending={() => <>Loading...</>}
+      onPending={() => <Spinner variant="dark" class="mx-auto w-full " />}
       onRejected={(error) => <>Error: {error.message}</>}
       onResolved={(content) => (
         <section class="container space-y-6 mt-4 md:mt-20">
@@ -82,7 +83,7 @@ const PortfolioCard = component$(
                 title={data.callToActionTitle}
               />
 
-              <TruncatedHtml content={data.description} maxLength={200} />
+              <TruncatedHtml content={data.description} maxLength={140} />
               <div class="flex justify-between items-center gap-4">
                 {data.technologies.splice(0, 4).map((el) => (
                   <img

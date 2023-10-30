@@ -11,16 +11,26 @@ const spinnerSize: Record<SpinnerSize, string> = {
 type SpinnerProps = {
   variant?: Variant;
   size?: SpinnerSize;
+  class?: string;
 };
 
-const Spinner = ({ variant = "light", size = "md" }: SpinnerProps) => {
+const Spinner = ({
+  variant = "light",
+  size = "md",
+  class: className,
+}: SpinnerProps) => {
   return (
     <div aria-label="Loading..." role="status">
       <svg
-        class={classNames("animate-spin mr-2", spinnerSize[size], {
-          "fill-white": variant === "light",
-          "fill-black": variant === "dark",
-        })}
+        class={classNames(
+          "animate-spin mr-2",
+          spinnerSize[size],
+          {
+            "fill-white": variant === "light",
+            "fill-black": variant === "dark",
+          },
+          className
+        )}
         viewBox="3 3 18 18"
       >
         <path

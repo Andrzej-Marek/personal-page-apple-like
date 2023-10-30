@@ -3,6 +3,7 @@ import { fetchEntries } from "@builder.io/sdk-qwik";
 import { ExperienceResult } from "~/api/experience.api";
 import Card from "~/components/Card";
 import ListElement from "~/components/ListElement";
+import Spinner from "~/components/Spinner";
 import { BUILDER_PUBLIC_API_KEY } from "~/routes/portfolio";
 
 const ProjectsHistoryCard = component$(() => {
@@ -16,7 +17,7 @@ const ProjectsHistoryCard = component$(() => {
   return (
     <Resource
       value={linksResource}
-      onPending={() => <>Loading...</>}
+      onPending={() => <Spinner variant="dark" class="mx-auto w-full " />}
       onRejected={(error) => <>Error: {error.message}</>}
       onResolved={(content) => (
         // @ts-ignore

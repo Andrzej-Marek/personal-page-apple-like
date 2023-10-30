@@ -18,7 +18,7 @@ const TruncatedHtml = ({
 
   return (
     <div
-      class="text-gray flex-1 text-xs max-h-20 w-full  overflow-hidden "
+      class="text-gray flex-1 text-sm max-h-20 w-full  overflow-hidden "
       dangerouslySetInnerHTML={truncatedContent}
     />
   );

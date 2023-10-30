@@ -6,6 +6,7 @@ import { PortfolioData, PortfolioResult } from "~/api/porfolio.api";
 import { DocumentHead, routeLoader$, useLocation } from "@builder.io/qwik-city";
 
 import LetsWorkTogethersCard from "~/containers/LetWorkTogetherCard";
+import Spinner from "~/components/Spinner";
 
 export const useProject = routeLoader$(async (requestEvent) => {
   const project = requestEvent.params.project;
@@ -31,7 +32,7 @@ export default component$(() => {
   return (
     <Resource
       value={linksResource}
-      onPending={() => <>Loading...</>}
+      onPending={() => <Spinner variant="dark" class="mx-auto w-full " />}
       onRejected={(error) => <>Error: {error.message}</>}
       onResolved={(productDetails) => (
         <>
@@ -69,12 +70,12 @@ const ProjectPage = component$(({ data }: { data: PortfolioData }) => {
             </div>
 
             <div
-              class="text-gray flex-1 text-sm "
+              class="text-gray flex-1 text-sm leading-6"
               dangerouslySetInnerHTML={data.description}
             />
           </Card>
           <Card heading="Technology">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center justify-evenly gap-4 flex-wrap">
               {data.technologies.map((tech) => (
                 <div class="flex flex-col items-center gap-2" key={tech.name}>
                   <img
@@ -91,9 +92,9 @@ const ProjectPage = component$(({ data }: { data: PortfolioData }) => {
               ))}
             </div>
           </Card>
-          <Card heading="About">
+          <Card heading="My role">
             <div
-              class="text-gray flex-1 text-sm "
+              class="text-gray flex-1 text-sm leading-6 "
               dangerouslySetInnerHTML={data.about}
             />
           </Card>
