@@ -24,7 +24,7 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   return (
-    <main>
+    <main class="pb-8 lg:pb-0">
       <NavBar />
       <MobileNavBar />
       <Slot />

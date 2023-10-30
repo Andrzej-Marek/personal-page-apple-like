@@ -1,4 +1,5 @@
-import { $, component$ } from "@builder.io/qwik";
+import CompletedSVG from "~/media/images/completed.svg?jsx";
+import { $, component$, useSignal } from "@builder.io/qwik";
 import { DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
 import { useForm, zodForm$ } from "@modular-forms/qwik";
 import type { InitialValues, SubmitHandler } from "@modular-forms/qwik";
@@ -9,6 +10,7 @@ import Input from "~/components/Input";
 import TextArea from "~/components/TextArea";
 import ContactCard from "~/containers/ContactCard";
 import SocialMediaCard from "~/containers/SocialMediaCard";
+import { EmailService } from "~/services/Emial.service";
 
 const ContactSchema = z.object({
   name: z.string().nullish(),
@@ -44,15 +46,41 @@ export const useFormLoader = routeLoader$<InitialValues<ContactSchema>>(() => ({
 }));
 
 const ContactForm = component$(() => {
+  const status = useSignal<"INITIAL" | "IN_PROGRESS" | "SUBMITTED" | "ERROR">(
+    "INITIAL"
+  );
+
   const [, { Form, Field }] = useForm<ContactSchema>({
     loader: useFormLoader(),
     validate: zodForm$(ContactSchema),
   });
 
-  const handleSubmit = $<SubmitHandler<ContactSchema>>((values, event) => {
-    // Runs on client
-    console.log({ values, event });
+  const handleSubmit = $<SubmitHandler<ContactSchema>>(async (values) => {
+    status.value = "IN_PROGRESS";
+    try {
+      await EmailService.send({
+        email: values.email,
+        message: values.message,
+        name: values.name ?? undefined,
+      });
+      status.value = "SUBMITTED";
+    } catch (error) {
+      status.value = "ERROR";
+    }
   });
+
+  if (status.value == "SUBMITTED") {
+    return (
+      <div class="flex items-center justify-center flex-col text-center gap-8">
+        <div>
+          <h2 class="text-xl font-semibold">Thank You for Contacting Me!</h2>
+
+          <p class="text-sm text-gray">I'll answer as soon as possible</p>
+        </div>
+        <CompletedSVG class="aspect- w-full max-w-[200px] h-auto rounded-xl" />
+      </div>
+    );
+  }
 
   return (
     <Form class="flex flex-col h-full gap-4" onSubmit$={handleSubmit}>
@@ -104,7 +132,37 @@ const ContactForm = component$(() => {
         )}
       </Field>
 
-      <Button type="submit">Send</Button>
+      <Button
+        disabled={status.value === "IN_PROGRESS"}
+        type="submit"
+        loading={status.value === "IN_PROGRESS"}
+      >
+        Send
+      </Button>
+      {status.value === "ERROR" && (
+        <div class="text-center">
+          <p class="text-base text-red-500 font-semibold">
+            It seems there was an issue with the contact form submission.
+          </p>
+          <p class="text-sm">
+            Please feel free to reach out to me directly via email at{" "}
+            <a
+              href="mailto:contact@andrzejmarek.com"
+              class="text-primary font-semibold underline whitespace-nowrap"
+            >
+              contact@andrzejmarek.com
+            </a>{" "}
+            or by phone at{" "}
+            <a
+              href="tel:+48794965465"
+              class="text-primary font-semibold underline whitespace-nowrap"
+            >
+              (+48) 794 965 465
+            </a>
+            . I apologize for any inconvenience.
+          </p>
+        </div>
+      )}
     </Form>
   );
 });

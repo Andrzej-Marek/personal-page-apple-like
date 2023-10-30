@@ -23,7 +23,7 @@ const ContactCard = ({
         <ContactElement
           variant={variant}
           section="MAIL"
-          text={["andrzejmarek116@gmail.com"]}
+          text={["contact@andrzejmarek.com"]}
         >
           <MailIcon />
         </ContactElement>
