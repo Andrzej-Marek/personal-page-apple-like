@@ -168,7 +168,7 @@ const ContactForm = component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Contact Andrzej Marek - React & Node.js Developer",
+  title: "Contact Andrzej Marek - Software Developer",
   links: [
     {
       rel: "canonical",
@@ -196,7 +196,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:title",
-      content: "Contact Andrzej Marek - React & Node.js Developer",
+      content: "Contact Andrzej Marek - Software Developer",
     },
     {
       name: "og:description",
@@ -205,7 +205,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://andrzejmarek.com/contact-image.jpg", // Replace with an image related to your contact page or your profile image
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "og:url",
@@ -225,7 +225,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:title",
-      content: "Contact Andrzej Marek - React & Node.js Developer",
+      content: "Contact Andrzej Marek - Software Developer",
     },
     {
       name: "twitter:description",
@@ -238,11 +238,11 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:site",
-      content: "@yourtwitterhandle", // Replace with your actual Twitter handle
+      content: "@EkstraPower", // Replace with your actual Twitter handle
     },
     {
       name: "twitter:creator",
-      content: "@yourtwitterhandle", // Replace with your actual Twitter handle
+      content: "@EkstraPower", // Replace with your actual Twitter handle
     },
     {
       name: "canonical",

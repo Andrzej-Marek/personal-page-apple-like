@@ -38,7 +38,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://andrzejmarek.com/cv-image.jpg", // Replace with an image related to your CV or your profile image
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "og:url",
@@ -71,11 +71,11 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:site",
-      content: "@yourtwitterhandle", // Replace with your actual Twitter handle
+      content: "@EkstraPower", // Replace with your actual Twitter handle
     },
     {
       name: "twitter:creator",
-      content: "@yourtwitterhandle", // Replace with your actual Twitter handle
+      content: "@EkstraPower", // Replace with your actual Twitter handle
     },
     {
       name: "canonical",

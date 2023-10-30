@@ -104,7 +104,7 @@ const PortfolioCard = component$(
 );
 
 export const head: DocumentHead = {
-  title: "Portfolio - Andrzej Marek, React & Node.js Developer",
+  title: "Portfolio - Andrzej Marek, Software Developer",
   links: [
     {
       rel: "canonical",
@@ -132,7 +132,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:title",
-      content: "Portfolio - Andrzej Marek, React & Node.js Developer",
+      content: "Portfolio - Andrzej Marek, Software Developer",
     },
     {
       name: "og:description",
@@ -141,7 +141,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://andrzejmarek.com/portfolio-image.jpg", // Replace with an image related to your portfolio
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "og:url",
@@ -161,7 +161,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:title",
-      content: "Portfolio - Andrzej Marek, React & Node.js Developer",
+      content: "Portfolio - Andrzej Marek, Software Developer",
     },
     {
       name: "twitter:description",
@@ -174,11 +174,11 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:site",
-      content: "@yourtwitterhandle", // Replace with your actual Twitter handle
+      content: "@EkstraPower", // Replace with your actual Twitter handle
     },
     {
       name: "twitter:creator",
-      content: "@yourtwitterhandle", // Replace with your actual Twitter handle
+      content: "@EkstraPower", // Replace with your actual Twitter handle
     },
     {
       name: "canonical",

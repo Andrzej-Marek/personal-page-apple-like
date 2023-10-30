@@ -39,7 +39,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Andrzej Marek - React & Node.js Developer",
+  title: "Andrzej Marek - Software Developer",
   links: [
     {
       rel: "canonical",
@@ -50,7 +50,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        "I'm a passionate React and Node.js developer, creating web apps to bring your ideas to life. Learn more about me and my work on this website.",
+        "React & Node.js Maestro 🔥 Crafting Digital Marvels 💻 Turning Code into Creative Magic 💪",
     },
 
     {
@@ -82,7 +82,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:title",
-      content: "Andrzej Marek - React & Node.js Developer",
+      content: "Andrzej Marek - Software Developer",
     },
     {
       name: "og:description",
@@ -91,7 +91,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://andrzejmarek.com/images/profile.webp",
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "og:url",
@@ -111,7 +111,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:title",
-      content: "Andrzej Marek - React & Node.js Developer",
+      content: "Andrzej Marek - Software Developer",
     },
     {
       name: "twitter:description",

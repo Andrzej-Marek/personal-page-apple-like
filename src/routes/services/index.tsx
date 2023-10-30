@@ -7,7 +7,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Services - Andrzej Marek, React & Node.js Developer",
+  title: "Services - Andrzej Marek, Software Developer",
   links: [
     {
       rel: "canonical",
@@ -35,7 +35,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:title",
-      content: "Services - Andrzej Marek, React & Node.js Developer",
+      content: "Services - Andrzej Marek, Software Developer",
     },
     {
       name: "og:description",
@@ -44,7 +44,7 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://andrzejmarek.com/services-image.jpg", // Replace with an image related to your services
+      content: "https://andrzejmarek.com/images/ogimage.webp",
     },
     {
       name: "og:url",
@@ -64,7 +64,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:title",
-      content: "Services - Andrzej Marek, React & Node.js Developer",
+      content: "Services - Andrzej Marek, Software Developer",
     },
     {
       name: "twitter:description",
